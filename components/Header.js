@@ -1,14 +1,26 @@
+import React from 'react';
 import Link from 'next/link';
 
-export default function Header({ name }) {
+const Header = ({ name }) => {
   return (
-    <header className="pt-20 pb-12">
-      <div className="w-12 h-12 rounded-full block mx-auto mb-4 bg-gradient-conic from-gradient-3 to-gradient-4" />
-      <p className="text-2xl dark:text-white text-center">
-        <Link href="/">
-          <a>{name}</a>
-        </Link>
-      </p>
+    <header className="...">
+      {/* Add the sidebar */}
+      <nav className="...">
+        <ul className="...">
+          <li>
+            <Link href="/eula">
+              <a className="...">EULA</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/privacy-policy">
+              <a className="...">Privacy Policy</a>
+            </Link>
+          </li>
+        </ul>
+      </nav>      
     </header>
   );
-}
+};
+
+export default Header;
